@@ -11,7 +11,7 @@ const App: React.FC = () => {
   useEffect(() => {
     // Effettua la chiamata API
     axios
-      .get("http://localhost:3001/api/data")
+      .get("https://siclabs-backend.onrender.com/api/data")
       .then((response) => {
         setData(response.data);
       })
@@ -20,7 +20,9 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>Lista dei Titoli</h1>
+      <h1>
+        Se qui sotto c'è una scritta, la chiamata a BE è andata a buon fine
+      </h1>
       <ul>
         {data.map((item, index) => (
           <li key={index}>{item.titolo}</li>
